@@ -25,4 +25,4 @@ clean:
 	rm *.o *~
 	
 run: 
-	./main script_3d
+	./main my_script

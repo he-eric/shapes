@@ -196,12 +196,15 @@ void parse_file ( char * filename,
       draw_lines(pm, s, g);
       display(s);
     }
+    else if ( strncmp(line, "clear", strlen(line)) == 0 ) {
+      clear_screen(s);
+    }
     else if ( strncmp(line, "save", strlen(line)) == 0 ) {
-      fgets(line, 255, f);
+      //fgets(line, 255, f);
       // line[strlen(line)-1] = '\0';
       clear_screen(s);
       draw_lines(pm, s, g);
-      save_extension(s, line);
+      save_extension(s, "line.png");
     }
     else if ( strncmp(line, "quit", strlen(line)) == 0 ) {
       return;
